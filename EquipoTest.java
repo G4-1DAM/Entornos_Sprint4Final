@@ -30,7 +30,7 @@ class EquipoTest {
 	@Test
 	void testSetNombreEquipoCaracterMin() {
 		Equipo equipo = new Equipo();
-		String nombreEquipo = "1DAM";
+		String nombreEquipo = "GDAM";
 		
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(nombreEquipo, equipo.getNombreEquipo());
