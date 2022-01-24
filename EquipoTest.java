@@ -158,6 +158,6 @@ class EquipoTest {
 			assertEquals(null, equipo.getRanking());
 		}
 	}
-	
+}
 
 
