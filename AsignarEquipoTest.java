@@ -167,5 +167,191 @@ class AsignarEquipoTest {
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
 
+	//AQUÍ EMPIEZO YO
+	/*Asignar jugador que no exista (Es decir, es nulo)*/
+	@Test
+	void testSetJugador() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+		/*Asignamos un jugador que puede tener campos válidos pero que no existe*/
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Antonio";
+		int edadValida = 20;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+
+		/*Asignar el jugador creado en asignar equipo*/
+		asignarEquipo.setJugador(jugador);
+
+		Jugador jugadorGuardado = asignarEquipo.getJugador();
+		assertNotNull(null);
+		assertEquals(null, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	/*Asignar jugador que exista y tenga todos sus campos válidos*/
+	@Test
+	void testSetJugador() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+		/*Creamos un jugador con todos los campos válidos*/
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Carlos";
+		int edadValida = 25;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+
+		/*Asignar el jugador creado en asignar equipo*/
+		asignarEquipo.setJugador(jugador);
+
+		Jugador jugadorGuardado = asignarEquipo.getJugador();
+		assertNotNull(jugadorGuardado);
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	/*Asignar jugador que exista, pero su nombre sea inválido
+	(podeis poner cualquier nombre no válido, porque ya se prueba
+	todas las combinaciones posibles en el anterior)*/
+	@Test
+	void testSetJugador() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+		/*Creamos un jugador con todos los campos válidos*/
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Novalido";
+		int edadValida = 20;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+
+		/*Asignar el jugador creado en asignar equipo*/
+		asignarEquipo.setJugador(jugador);
+
+		Jugador jugadorGuardado = asignarEquipo.getJugador();
+		assertNotNull(null);
+		assertEquals(null, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	/*Asignar jugador que exista, pero no tenga nombre (es decir,
+	habéis creado el jugador pero no habéis puesto el nombre con setnombre)*/
+	@Test
+	void testSetJugador() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+		/*Creamos un jugador con todos los campos válidos*/
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Antonio";
+		int edadValida = 20;
+		String idiomaValido = "Español";
+
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+
+		/*Asignar el jugador creado en asignar equipo*/
+		asignarEquipo.setJugador(jugador);
+
+		Jugador jugadorGuardado = asignarEquipo.getJugador();
+		assertNotNull(null);
+		assertEquals(null, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	/*Asignar jugador que exista, pero su edad sea inválida
+	(podeis poner cualquier edad no válida, porque ya se prueba
+	todas las combinaciones posibles en el anterior)*/
+	@Test
+	void testSetJugador() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+		/*Creamos un jugador con todos los campos válidos*/
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Antonio";
+		int edadValida = 15;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+
+		/*Asignar el jugador creado en asignar equipo*/
+		asignarEquipo.setJugador(jugador);
+
+		Jugador jugadorGuardado = asignarEquipo.getJugador();
+		assertNotNull(null);
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(null, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	/*Asignar jugador que exista, pero no tenga edad(es decir,
+	habéis creado el jugador pero no habéis puesto el nombre con setedad)*/
+	@Test
+	void testSetJugador() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+		/*Creamos un jugador con todos los campos válidos*/
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Antonio";
+		int edadValida = ;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+
+		/*Asignar el jugador creado en asignar equipo*/
+		asignarEquipo.setJugador(jugador);
+
+		Jugador jugadorGuardado = asignarEquipo.getJugador();
+		assertNotNull(jugadorGuardado);
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	/*Asignar jugador que exista, pero su idioma sea inválido
+	(podeis poner cualquier idioma no válido, porque ya se prueba
+	todas las combinaciones posibles en el anterior)*/
+	@Test
+	void testSetJugador() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+		/*Creamos un jugador con todos los campos válidos*/
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Antonio";
+		int edadValida = 20;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+
+		/*Asignar el jugador creado en asignar equipo*/
+		asignarEquipo.setJugador(jugador);
+
+		Jugador jugadorGuardado = asignarEquipo.getJugador();
+		assertNotNull(jugadorGuardado);
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	/*Asignar jugador que exista, pero no tenga idioma(es decir,
+	habéis creado el jugador pero no habéis puesto el idioma con setIdioma)*/
+	@Test
+	void testSetJugador() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+		/*Creamos un jugador con todos los campos válidos*/
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Antonio";
+		int edadValida = 20;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+
+		/*Asignar el jugador creado en asignar equipo*/
+		asignarEquipo.setJugador(jugador);
+
+		Jugador jugadorGuardado = asignarEquipo.getJugador();
+		assertNotNull(jugadorGuardado);
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
 }
 
