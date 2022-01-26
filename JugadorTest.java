@@ -86,14 +86,14 @@ class JugadorTest {
 	}
 
 	@Test
-	void testSetEdadIgual18() {
+	void testSetEdadJugadorIgual18() {
 	Jugador jugador=new Jugador();
 	int edad =18;
 	jugador.setEdad(edad);
 	assertEquals(edad, jugador.getEdad());
 	}
 	@Test
-	void testsetEdadMenor18() {
+	void testsetEdadJugadorMenor18() {
 		Jugador jugador=new Jugador();
 		int edad=5;
 		
@@ -101,7 +101,7 @@ class JugadorTest {
 		assertEquals(edad, jugador.getEdad());
 	}
 	@Test
-	void testSetEdadMayorl18() {
+	void testSetEdadJugadorMayorl18() {
 	Jugador jugador=new Jugador();
 	int edad =26;
 	jugador.setEdad(edad);
@@ -109,7 +109,7 @@ class JugadorTest {
 	}
 	
 	@Test
-	void testSetEdadCaracternoValido{
+	void testSetEdadJugadorCaracternoValido{
 		Jugador jugador=new Jugador();
 		//int edad=Integer.passerInt("quince");
 		//Jugador.setEdad(edad);
@@ -123,21 +123,21 @@ class JugadorTest {
 	}
 	
 	@Test
-	void testSetEdadIgual100() {
+	void testSetEdadJugadorIgual100() {
 		Jugador jugador=new Jugador();
 		int edad =100;
 		jugador.setEdad(edad);
 		assertEquals(edad, jugador.getEdad());
 		}
 	@Test
-	void testsetEdadMayor100() {
+	void testsetEdadJugadorMayor100() {
 		Jugador jugador=new Jugador();
 		int edad=105;
 		jugador.setEdad(edad);
 		assertEquals(edad, jugador.getEdad());
 	}
 	@Test
-	void testsetEdadVacio() {
+	void testsetEdadJugadorVacio() {
 		Jugador jugador=new Jugador();
 		int edad=(Integer)null;
 		jugador.setEdad(edad);
