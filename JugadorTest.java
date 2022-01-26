@@ -100,13 +100,6 @@ class JugadorTest {
 		jugador.setEdad(edad);
 		assertEquals(edad, jugador.getEdad());
 	}
-	@Test
-	void testSetEdadJugadorMayorl18() {
-	Jugador jugador=new Jugador();
-	int edad =26;
-	jugador.setEdad(edad);
-	assertEquals(edad, jugador.getEdad());
-	}
 	
 	@Test
 	void testSetEdadJugadorCaracternoValido{
