@@ -118,7 +118,7 @@ class AsignarEquipoTest {
 
 	/*Asignar jugador que no exista (Es decir, es nulo)*/
 	@Test
-	void testSetJugador() {
+	void testSetEquipoJugadorNoExiste() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Asignamos un jugador que puede tener campos válidos pero que no existe*/
 		Jugador jugador = new Jugador();
@@ -141,7 +141,7 @@ class AsignarEquipoTest {
 
 	/*Asignar jugador que exista y tenga todos sus campos válidos*/
 	@Test
-	void testSetJugador() {
+	void testSetEquipoTodosCamposValidos() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
@@ -166,7 +166,7 @@ class AsignarEquipoTest {
 	(podeis poner cualquier nombre no válido, porque ya se prueba
 	todas las combinaciones posibles en el anterior)*/
 	@Test
-	void testSetJugador() {
+	void testSetEquipoNombreInvalido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
@@ -190,7 +190,7 @@ class AsignarEquipoTest {
 	/*Asignar jugador que exista, pero no tenga nombre (es decir,
 	habéis creado el jugador pero no habéis puesto el nombre con setnombre)*/
 	@Test
-	void testSetJugador() {
+	void testSetEquipoSinNombrePuesto() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
@@ -215,7 +215,7 @@ class AsignarEquipoTest {
 	(podeis poner cualquier edad no válida, porque ya se prueba
 	todas las combinaciones posibles en el anterior)*/
 	@Test
-	void testSetJugador() {
+	void testSetEquipoEdadInvalida() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
@@ -232,19 +232,19 @@ class AsignarEquipoTest {
 		Jugador jugadorGuardado = asignarEquipo.getJugador();
 		assertNull(null);
 		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
-		assertEquals(null, jugadorGuardado.getEdad());
+		assertEquals(null, (Integer) jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
 
 	/*Asignar jugador que exista, pero no tenga edad(es decir,
 	habéis creado el jugador pero no habéis puesto el nombre con setedad)*/
 	@Test
-	void testSetJugador() {
+	void testSetEquipoSinEdad() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
-		int edadValida = ;
+		Integer edadValida = null ;
 		String idiomaValido = "Español";
 		jugador.setNombreJugador(nombrevalido);
 
@@ -256,7 +256,7 @@ class AsignarEquipoTest {
 		Jugador jugadorGuardado = asignarEquipo.getJugador();
 		assertNull(null);
 		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
-		assertEquals(null, jugadorGuardado.getEdad());
+		assertEquals(null, (Integer) jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
 
@@ -264,7 +264,7 @@ class AsignarEquipoTest {
 	(podeis poner cualquier idioma no válido, porque ya se prueba
 	todas las combinaciones posibles en el anterior)*/
 	@Test
-	void testSetJugador() {
+	void testSetEquipoIdiomaInvalido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
@@ -294,7 +294,7 @@ class AsignarEquipoTest {
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
 		int edadValida = 20;
-		String idiomaValido = "";
+		String idiomaValido = "Español";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 
