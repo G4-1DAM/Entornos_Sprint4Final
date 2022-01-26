@@ -98,7 +98,7 @@ class JugadorTest {
 		int edad=5;
 		
 		jugador.setEdad(edad);
-		assertEquals(edad, jugador.getEdad());
+		assertNull(jugador.getEdad());
 	}
 	
 	@Test
@@ -127,7 +127,7 @@ class JugadorTest {
 		Jugador jugador=new Jugador();
 		int edad=105;
 		jugador.setEdad(edad);
-		assertEquals(edad, jugador.getEdad());
+		assertNull(jugador.getEdad());
 	}
 	@Test
 	void testsetEdadJugadorVacio() {
