@@ -84,7 +84,7 @@ class JugadorTest {
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null, jugador.getNombreJugador());
 	}
-
+	//caracter igual al limite menor
 	@Test
 	void testSetEdadJugadorIgual18() {
 	Jugador jugador=new Jugador();
@@ -92,15 +92,16 @@ class JugadorTest {
 	jugador.setEdad(edad);
 	assertEquals(edad, jugador.getEdad());
 	}
+	//menor al numeto permitido
 	@Test
 	void testsetEdadJugadorMenor18() {
 		Jugador jugador=new Jugador();
-		int edad=5;
+		int edad=17;
 		
 		jugador.setEdad(edad);
 		assertNull(jugador.getEdad());
 	}
-	
+	//carcater letras no validas
 	@Test
 	void testSetEdadJugadorCaracternoValido{
 		Jugador jugador=new Jugador();
@@ -114,7 +115,7 @@ class JugadorTest {
 		});
 		assertNull(jugador.getEdad());
 	}
-	
+	//caracter limite mayor
 	@Test
 	void testSetEdadJugadorIgual100() {
 		Jugador jugador=new Jugador();
@@ -122,6 +123,7 @@ class JugadorTest {
 		jugador.setEdad(edad);
 		assertEquals(edad, jugador.getEdad());
 		}
+	//carcater mayor al limite
 	@Test
 	void testsetEdadJugadorMayor100() {
 		Jugador jugador=new Jugador();
@@ -129,6 +131,7 @@ class JugadorTest {
 		jugador.setEdad(edad);
 		assertNull(jugador.getEdad());
 	}
+	//carcater sin rellenar
 	@Test
 	void testsetEdadJugadorVacio() {
 		Jugador jugador=new Jugador();
