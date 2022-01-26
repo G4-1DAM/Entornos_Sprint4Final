@@ -4,45 +4,30 @@ import org.junit.jupiter.api.Test;
 
 class AsignarEquipoTest {
 
-	@Test
-	void testAsignarEquipo() {
-		fail("Not yet implemented");
-	}
-	
 	/**
-	 * @author RobertoGarciaSanchez
-	 *
-	 */
+	* @author RobertoGarciaSanchez
+	*
+	*/
 	
 	/*Asignar equipo que no exista*/
-	//CREO QUE ESTÁ MAL, O NO ES ESTO LO QUE HAY QUE HACER
 	@Test
 	void testSetEquipoNoExiste() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		
-		/*
-		*Creamos un equipo que no exista(CREO QUE NO ES ASÍ)*
-		Equipo equipo = new Equipo();
-		String nombreEquipo ="";
-		int ranking=0;
-		equipo.setNombreEquipo(nombreEquipo);
-		equipo.setRanking(ranking);
-		*/
-		/*Asignar el equipo creado en asignar equipo*
+		Equipo equipo = null;
 		asignarEquipo.setEquipo(equipo);
-		*/
+		
 		
 		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
-		assertNull(null);
-		assertEquals(null, equipoGuardado.getNombreEquipo());
-		assertEquals(null, (Integer) equipoGuardado.getRanking());
+		assertNull(equipoGuardado);
+		
 	}	
 	
-	/*Asignar equipo que exista y tenga todos los campos válidos*/
+	/*Asignar equipo que exista y tenga todos los campos validos*/
 	@Test
 	void testSetEquipoCamposValidos() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un equipo con todos los campos válidos*/
+		/*Creamos un equipo con todos los campos validos*/
 		Equipo equipo = new Equipo();
 		String nombreEquipo ="GDAM";
 		int ranking = 0;
@@ -58,11 +43,11 @@ class AsignarEquipoTest {
 		assertEquals(ranking, equipoGuardado.getRanking());
 	}
 	
-	/*Asignar equipo que exista, pero tenga campo nombre no válido*/
+	/*Asignar equipo que exista, pero tenga campo nombre no valido*/
 	@Test
 	void testSetEquipoNombreNoValido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un equipo con campo nombre no válido*/
+		/*Creamos un equipo con campo nombre no valido*/
 		Equipo equipo = new Equipo();
 		String nombreEquipo ="1DAM";
 		int ranking = 0;
@@ -73,9 +58,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setEquipo(equipo);
 		
 		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
-		assertNull(null);
-		assertEquals(null, equipoGuardado.getNombreEquipo());//No se guardará porque el nombre no es válido
-		assertEquals(ranking, equipoGuardado.getRanking());
+		assertNull(equipoGuardado);
 	}
 	
 	/*Asignar equipo que exista, pero no tenga nombre*/
@@ -91,16 +74,14 @@ class AsignarEquipoTest {
 		asignarEquipo.setEquipo(equipo);
 		
 		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
-		assertNull(null);
-		assertEquals(null, equipoGuardado.getNombreEquipo());//No se guardará porque no tiene nombre
-		assertEquals(ranking, equipoGuardado.getRanking());
+		assertNull(equipoGuardado);
 	}
 	
-	/*Asignar equipo que exista, pero tenga campo ranking no válido*/
+	/*Asignar equipo que exista, pero tenga campo ranking no valido*/
 	@Test
 	void testSetEquipoRankingNoValido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un equipo con campo nombre no válido*/
+		/*Creamos un equipo con campo nombre no vÃ¡lido*/
 		Equipo equipo = new Equipo();
 		String nombreEquipo ="GDAM";
 		int ranking= 11;
@@ -111,9 +92,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setEquipo(equipo);
 		
 		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
-		assertNull(null);
-		assertEquals(nombreEquipo, equipoGuardado.getNombreEquipo());
-		assertEquals(null, (Integer) equipoGuardado.getRanking());//No se guardará porque el ranking no es válido
+		assertNull(equipoGuardado);
 	}
 	
 	/*Asignar equipo que exista, pero no tenga ranking*/
@@ -129,9 +108,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setEquipo(equipo);
 		
 		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
-		assertNull(null);
-		assertEquals(nombreEquipo, equipoGuardado.getNombreEquipo());
-		assertEquals(null, (Integer) equipoGuardado.getRanking());//No se guardará porque no hay ranking
+		assertNull(equipoGuardado);
 	}
 	
 	/**
