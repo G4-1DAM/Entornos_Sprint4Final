@@ -109,6 +109,20 @@ class JugadorTest {
 	}
 	
 	@Test
+	void testSetEdadCaracternoValido{
+		Jugador jugador=new Jugador();
+		//int edad=Integer.passerInt("quince");
+		//Jugador.setEdad(edad);
+		//assertNull(jugador.getEdad());
+		
+		assertThrows(NumberFormatException.class, () -> {
+			int edad=Integer.parseInt("hola");
+			jugador.setEdad(edad);
+		});
+		assertNull(jugador.getEdad());
+	}
+	
+	@Test
 	void testSetEdadIgual100() {
 		Jugador jugador=new Jugador();
 		int edad =100;
@@ -125,9 +139,9 @@ class JugadorTest {
 	@Test
 	void testsetEdadVacio() {
 		Jugador jugador=new Jugador();
-		int edad=(integer)null;
+		int edad=(Integer)null;
 		jugador.setEdad(edad);
-		assertEquals(null,(integer) jugador.getEdad());
+		assertEquals(null,(Integer) jugador.getEdad());
 	}
 	
 	
