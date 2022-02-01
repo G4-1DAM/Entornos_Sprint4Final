@@ -12,7 +12,14 @@ public class Jugador {
 	}
 	
 	public void setEdad(int edad) {
-		//code here
+		if (edad>=18 && edad<=100) {
+			this.edad=edad;
+		}else {
+			if (edad<18 && edad>=100) {
+				this.edad=0;
+			}
+		}
+		
 	}
 	public void setIdioma(String idioma) {
 		//code here
