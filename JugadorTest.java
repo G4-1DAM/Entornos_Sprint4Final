@@ -99,21 +99,24 @@ class JugadorTest {
 		int edad=17;
 		
 		jugador.setEdad(edad);
-		assertNull(jugador.getEdad());
+		assertEquals(0, jugador.getEdad());
 	}
+	
 	//carcater letras no validas
+	
+	
+	
+	
 	@Test
-	void testSetEdadJugadorCaracternoValido{
+	void testSetEdadJugadorCaracternoValido(){
 		Jugador jugador=new Jugador();
-		//int edad=Integer.passerInt("quince");
-		//Jugador.setEdad(edad);
-		//assertNull(jugador.getEdad());
 		
-		assertThrows(NumberFormatException.class, () -> {
+		
+		NumberFormatException Thrown=assertThrows(NumberFormatException.class, () -> {
 			int edad=Integer.parseInt("hola");
 			jugador.setEdad(edad);
 		});
-		assertNull(jugador.getEdad());
+		assertNull(Thrown.getCause());
 	}
 	//caracter limite mayor
 	@Test
@@ -129,15 +132,17 @@ class JugadorTest {
 		Jugador jugador=new Jugador();
 		int edad=105;
 		jugador.setEdad(edad);
-		assertNull(jugador.getEdad());
+		assertEquals(0, jugador.getEdad());
 	}
 	//carcater sin rellenar
 	@Test
 	void testsetEdadJugadorVacio() {
 		Jugador jugador=new Jugador();
-		int edad=(Integer)null;
+		
+		
+		int edad=(Integer) null;
 		jugador.setEdad(edad);
-		assertEquals(null,(Integer) jugador.getEdad());
+		assertEquals(0, jugador.getEdad());
 	}
 	
 	
