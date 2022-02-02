@@ -19,7 +19,7 @@ class JugadorTest {
 	@Test
 	void testSetNombreJugadorVacio() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "";
+		String nombreJugador = "  ";
 		
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null, jugador.getNombreJugador());
@@ -76,6 +76,7 @@ class JugadorTest {
 	/**
 	 * Set nombre de jugador invalido con caracteres numericos
 	 */
+	
 	@Test
 	void testSetNombreJugadorInvalidoCaracterNumerico() {
 		Jugador jugador = new Jugador();
@@ -84,6 +85,7 @@ class JugadorTest {
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null, jugador.getNombreJugador());
 	}
+	//jorge baratech comentarios sobre edad
 	//caracter igual al limite menor
 	@Test
 	void testSetEdadJugadorIgual18() {
@@ -103,8 +105,6 @@ class JugadorTest {
 	}
 	
 	//carcater letras no validas
-	
-	
 	
 	
 	@Test
@@ -138,9 +138,7 @@ class JugadorTest {
 	@Test
 	void testsetEdadJugadorVacio() {
 		Jugador jugador=new Jugador();
-		
-		
-		int edad=(Integer) null;
+		int edad=0;
 		jugador.setEdad(edad);
 		assertEquals(0, jugador.getEdad());
 	}
@@ -170,7 +168,7 @@ class JugadorTest {
 	@Test
 	void testSetIdiomaVacio() {
 		Jugador jugador = new Jugador();
-		String idioma = "";
+		String idioma = null;
 		
 		jugador.setIdioma(idioma);
 		assertEquals(null, jugador.getIdioma());
