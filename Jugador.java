@@ -1,3 +1,5 @@
+
+
 public class Jugador {
 	private String nombre;
 	private int edad;
@@ -7,24 +9,59 @@ public class Jugador {
 			
 		}
 	
-	public void setNombreJugador(String nombre) {
-		//code here
-	}
 	
+	public void setNombreJugador(String nombre) {
+		
+		if(nombre!= null) {
+																	//si el nnombre no contiene solo letras lo pone null
+			if(nombre.length()>20||nombre.length()<4||!nombre.matches("[a-zA-Z\\t\\h]+|(^$)")) {
+				this.nombre=null;
+				
+			}else {
+				
+					this.nombre=nombre;
+				
+			    
+			}
+			
+		}
+		
+		
+		}
+		
+		
 	public void setEdad(int edad) {
 		if (edad>=18 && edad<=100) {
 			this.edad=edad;
 		}else {
-			if (edad<18 && edad>=100) {
+			if (edad<18 && edad>100 ) {
 				this.edad=0;
 			}
+			
 		}
 		
 	}
-	public void setIdioma(String idioma) {
-		//code here
-	}
 	
+	public void setIdioma(String idioma) {
+		
+			if(idioma!=null) {
+				if (!idioma.equals("español") ) {
+					this.idioma=null;
+			}else {
+				this.idioma=idioma;
+			}
+				
+				
+			}
+			
+			
+
+		
+		
+		
+		
+		}
+		
 
 	public String getIdioma() {
 		return idioma;
