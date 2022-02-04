@@ -45,7 +45,7 @@ class JugadorTest {
 	void testSetNombreJugadorCaracterMax() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Maridelrosalcayetana";
-		String nombreMayusculas = "MARIADELROSACAYETANA";
+		String nombreMayusculas = "MARIDELROSALCAYETANA";
 
 		
 		jugador.setNombreJugador(nombreJugador);
