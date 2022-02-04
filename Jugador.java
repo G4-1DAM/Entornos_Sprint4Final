@@ -19,7 +19,7 @@ public class Jugador {
 				
 			}else {
 				
-					this.nombre=nombre;
+					this.nombre=nombre.toUpperCase();
 				
 			    
 			}
