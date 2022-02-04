@@ -3,10 +3,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
- * 
- */
-
-/**
  * @author anton
  *
  */
@@ -19,36 +15,35 @@ class EquipoTest {
 	void testSetNombreEquipoVacio() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "";
-		
+
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null, equipo.getNombreEquipo());
 	}
-	
+
 	/**
 	 * Set nombre de equipo valido con caracteres minimos '4'.
 	 */
 	@Test
 	void testSetNombreEquipoCaracterMin() {
 		Equipo equipo = new Equipo();
-		String nombreEquipo = "gdam";
-		String nombreMayusculas = "GDAM";
+		String nombreEquipo = "GDAM";
 
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(nombreMayusculas, equipo.getNombreEquipo());
+		assertEquals(nombreEquipo, equipo.getNombreEquipo());
 	}
-	
+
 	/**
 	 * Set nombre de equipo valido con caracteres maximos '20'
 	 */
 	@Test
 	void testSetNombreEquipoCaracterMax() {
 		Equipo equipo = new Equipo();
-		String nombreMayusculas = "DESARROLLOAPLICACION";
+		String nombreEquipo = "DesarrolloAplicacion";
 
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(nombreMayusculas, equipo.getNombreEquipo());
+		assertEquals(nombreEquipo, equipo.getNombreEquipo());
 	}
-	
+
 	/**
 	 * Set nombre de equipo invalido con menos de 4 caracteres
 	 */
@@ -56,11 +51,11 @@ class EquipoTest {
 	void testSetNombreEquipoInvalidoCarcterMenor4() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "DAM";
-		
+
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null, equipo.getNombreEquipo());
 	}
-	
+
 	/**
 	 * Set nombre de equipo invalido con mas de 20 caracteres
 	 */
@@ -68,11 +63,11 @@ class EquipoTest {
 	void testSetNombreEquipoInvalidoCarcterMayor20() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "DesarrolloAplicacionesMultiplataforma";
-		
+
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null, equipo.getNombreEquipo());
 	}
-	
+
 	/**
 	 * Set nombre de equipo invalido con caracteres numericos
 	 */
@@ -80,83 +75,60 @@ class EquipoTest {
 	void testSetNombreEquipoInvalidoCarcterNumerico() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Equipo4Dam";
-		
+
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null, equipo.getNombreEquipo());
 	}
-			
-	
+
 	/**
 	 * @author Daniel
 	 */
 
-	//Ranking vacio
+	// Ranking vacio
 	@Test
 	public void testSetRankingVacio() {
 		Equipo equipo = new Equipo();
-		int ranking=(Integer)null;
+		int ranking = -1;
+		
 		equipo.setRanking(ranking);
-		assertNull(equipo.getRanking());
+		assertEquals(-1, equipo.getRanking());
 	}
 
-	//Ranking para caracteres        
-	@Test
-	public void testSetRankingCaracteresNoValidos() {
-		Equipo equipo = new Equipo();
-		assertThrows(NumberFormatException.class, () -> {
-			int ranking = Integer.parseInt("Caracter");
-			equipo.setRanking(ranking);
-		});
-		assertNull(equipo.getRanking());
-	}
-
-	//Ranking en 0        
+	// Ranking en 0
 	@Test
 	public void testSetRankingCero() {
 		Equipo equipo = new Equipo();
-		int ranking=0;
+		int ranking = 0;
 		equipo.setRanking(ranking);
 		assertEquals(ranking, equipo.getRanking());
 	}
 
-	//Ranking mayor de 0
+	// Ranking en 10
 	@Test
 	public void testSetRankingMayorCero() {
 		Equipo equipo = new Equipo();
-		int ranking=1;
+		int ranking = 10;
 		equipo.setRanking(ranking);
 		assertEquals(ranking, equipo.getRanking());
 	}
 
-	//Ranking mayor a 10
+	// Ranking mayor a 10
 	@Test
 	public void testSetRankingMayorDiez() {
 		Equipo equipo = new Equipo();
-		int ranking=11;
+		int ranking = 11;
+		
 		equipo.setRanking(ranking);
-		assertNull(equipo.getRanking());
+		assertEquals(-1, equipo.getRanking());
 	}
 
-	//Ranking menor a 10
+	// Ranking menor a 10
 	@Test
 	public void testSetRankingMenorDiez() {
 		Equipo equipo = new Equipo();
-		int ranking=9;
-		equipo.setRanking(ranking);
-		assertEquals(ranking, equipo.getRanking());
-	}
-
-	//Ranking igual a 10
-	@Test
-	public void testSetRankingIgualDiez() {
-		Equipo equipo = new Equipo();
-		int ranking=10;
+		int ranking = 9;
 		equipo.setRanking(ranking);
 		assertEquals(ranking, equipo.getRanking());
 	}
 
 }
-
-
-
-
