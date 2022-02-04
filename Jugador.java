@@ -1,6 +1,3 @@
-
-
-
 public class Jugador {
 	private String nombre;
 	private int edad;
@@ -10,72 +7,39 @@ public class Jugador {
 			
 		}
 	
-	
 	public void setNombreJugador(String nombre) {
-		
-		if(nombre!= null) {
-																	//si el nnombre no contiene solo letras lo pone null
-			if(nombre.length()>20||nombre.length()<4||!nombre.matches("[a-zA-Z\\t\\h]+|(^$)")) {
-				this.nombre=null;
+		int contador = 0;
+		String nombreMayusculas = nombre.toUpperCase();
+		for (int i = 0; i < nombreMayusculas.length(); i++) {
+			char letra = nombreMayusculas.charAt(i);
+			if (letra >= 65 && letra <= 90) {
 				
 			}else {
-				
-					this.nombre=nombre.toUpperCase();
-				
-			    
+				contador ++;
 			}
-			
-		}
-		
 		
 		}
-		
-		
-	public void setEdad(int edad) {
-		if (edad>=18 && edad<=100) {
-			this.edad=edad;
+		if(nombre.length()>3 && nombre.length()<=20 && contador == 0) {
+		this.nombre = nombre;
 		}else {
-			if (edad<18 && edad>100 ) {
-				this.edad=0;
-			}
-			
+			this.nombre = null;
 		}
-		
 	}
 	
+	public void setEdad(int edad) {
+		if(edad >=18 && edad <= 100) {
+			this.edad = edad;
+		}else {
+			this.edad = 0;
+		}
+	}
 	public void setIdioma(String idioma) {
-		
-			if(idioma!=null) {
-				if (!idioma.equals("español") ) {
-					this.idioma=null;
-			}else {
-				this.idioma=idioma;
-			}
-				
-				
-			}
-			
-			
-
-		
-		
-		
-		
+		if(idioma == "ingles" || idioma == "español"|| idioma == "frances"|| idioma == "aleman") {
+			this.idioma = idioma;
+		}else {
+			this.idioma = null;
 		}
-		
-
-	public String getIdioma() {
-		return idioma;
 	}
-	
-	public String getNombreJugador() {
-		return nombre;
-	}
-	public int getEdad() {
-		return edad;
-	}
-	
-	//Stoty 5 Carlos Soler
 	public String tipoJugador(){
 
 		String tipoJugador = "";
@@ -92,4 +56,17 @@ public class Jugador {
 
 		return tipoJugador;
 		}
+	
+	
+
+	public String getIdioma() {
+		return idioma;
+	}
+	
+	public String getNombreJugador() {
+		return nombre;
+	}
+	public int getEdad() {
+		return edad;
+	}
 }
