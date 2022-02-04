@@ -1,4 +1,3 @@
-
 public class Equipo {
 	private String nombreEquipo;
 	private int ranking;
@@ -13,13 +12,13 @@ public class Equipo {
 		for (int i = 0; i < nombreEquipoMayusculas.length(); i++) {
 			char letra = nombreEquipoMayusculas.charAt(i);
 			if (letra >= 65 && letra <= 90) {
-				
-			}else {
-				contador ++;
+
+			} else {
+				contador++;
 			}
-		
+
 		}
-		if (nombreEquipo.length() > 3 && nombreEquipo.length() <= 20 && contador==0) {
+		if (nombreEquipo.length() > 3 && nombreEquipo.length() <= 20 && contador == 0) {
 			this.nombreEquipo = nombreEquipo;
 		} else {
 			this.nombreEquipo = null;
@@ -41,23 +40,23 @@ public class Equipo {
 	public int getRanking() {
 		return ranking;
 	}
-	
+
 	public String categoriaEquipo() {
 		String categoria = "";
-		
-		if(ranking!=-1 && nombreEquipo!=null) {
-		
-			if(ranking>=7 && ranking<=10) {
-				categoria= "Primera";
+
+		if (ranking != -1 && nombreEquipo != null) {
+
+			if (ranking >= 7 && ranking <= 10) {
+				categoria = "Primera";
 			}
-			
-			else if(ranking>=3 && ranking<=6) {
-				categoria= "Segunda";
+
+			else if (ranking >= 3 && ranking <= 6) {
+				categoria = "Segunda";
 			}
-			
-			else if(ranking<3) {
-				categoria= "Tercera";
-			}			
+
+			else if (ranking < 3) {
+				categoria = "Tercera";
+			}
 		}
 		return categoria;
 	}
