@@ -177,5 +177,167 @@ class JugadorTest {
 		jugador.setIdioma(idioma);
 		assertEquals(null, jugador.getIdioma());
 	}
+	
+	//Story 5 CARLOS SOLER
 
+	//void testSetTipoJugador() {
+		//Jugador jugador = new Jugador();
+		
+		//int edad = 34;
+		//String nombre = "Juan";
+		//String idioma = "Español";
+		
+		//jugador.setNombreJugador(nombre);
+		//jugador.setEdad(edad);
+		//jugador.setIdioma(idioma);
+		
+		//assertEquals("Junior", jugador.tipoJugador());
+		//assertEquals("Senior", jugador.tipoJugador());
+		//assertEquals("Master", jugador.tipoJugador());
+		
+		//assertNotNull(edad, jugador.tipoJugador());
+		//assertNotNull(nombre, jugador.tipoJugador());
+		//assertNotNull(idioma, jugador.tipoJugador());
+	
+	@Test
+	void testSetTipoJugador18() {
+		Jugador jugador = new Jugador();
+		
+		int edad = 18;
+		String nombre = "Juan";
+		String idioma = "Español";
+		
+		jugador.setNombreJugador(nombre);
+		jugador.setEdad(edad);
+		jugador.setIdioma(idioma);
+		
+		assertEquals("Junior", jugador.tipoJugador());
+		
+		assertNotNull(edad, jugador.tipoJugador());
+		assertNotNull(nombre, jugador.tipoJugador());
+		assertNotNull(idioma, jugador.tipoJugador());
+	}
+	
+	@Test
+	void testSetTipoJugador24() {
+		Jugador jugador = new Jugador();
+		
+		int edad = 24;
+		String nombre = "Juan";
+		String idioma = "Español";
+		
+		jugador.setNombreJugador(nombre);
+		jugador.setEdad(edad);
+		jugador.setIdioma(idioma);
+		
+		assertEquals("Junior", jugador.tipoJugador());
+		
+		assertNotNull(edad, jugador.tipoJugador());
+		assertNotNull(nombre, jugador.tipoJugador());
+		assertNotNull(idioma, jugador.tipoJugador());
+	}
+	
+	@Test
+	void testSetTipoJugador25() {
+		Jugador jugador = new Jugador();
+		
+		int edad = 25;
+		String nombre = "Juan";
+		String idioma = "Español";
+		
+		jugador.setNombreJugador(nombre);
+		jugador.setEdad(edad);
+		jugador.setIdioma(idioma);
+		
+		assertEquals("Senior", jugador.tipoJugador());
+		
+		assertNotNull(edad, jugador.tipoJugador());
+		assertNotNull(nombre, jugador.tipoJugador());
+		assertNotNull(idioma, jugador.tipoJugador());
+	}
+	
+	@Test
+	void testSetTipoJugador34() {
+		Jugador jugador = new Jugador();
+		
+		int edad = 34;
+		String nombre = "Juan";
+		String idioma = "Español";
+		
+		jugador.setNombreJugador(nombre);
+		jugador.setEdad(edad);
+		jugador.setIdioma(idioma);
+		
+		assertEquals("Senior", jugador.tipoJugador());
+		
+		assertNotNull(edad, jugador.tipoJugador());
+		assertNotNull(nombre, jugador.tipoJugador());
+		assertNotNull(idioma, jugador.tipoJugador());
+	}
+	
+	@Test
+	void testSetTipoJugador35() {
+		Jugador jugador = new Jugador();
+		
+		int edad = 35;
+		String nombre = "Juan";
+		String idioma = "Español";
+		
+		jugador.setNombreJugador(nombre);
+		jugador.setEdad(edad);
+		jugador.setIdioma(idioma);
+		
+		assertEquals("Master", jugador.tipoJugador());
+		
+		assertNotNull(edad, jugador.tipoJugador());
+		assertNotNull(nombre, jugador.tipoJugador());
+		assertNotNull(idioma, jugador.tipoJugador());
+	}
+	
+	
+	@Test
+	void testSetTipoJugadorFaltaEdad() {
+		Jugador jugador = new Jugador();
+		
+		String nombre = "Juan";
+		String idioma = "Español";
+		
+		jugador.setNombreJugador(nombre);
+		jugador.setIdioma(idioma);
+		
+		assertNull(null, jugador.tipoJugador());
+		assertNotNull(nombre, jugador.tipoJugador());
+		assertNotNull(idioma, jugador.tipoJugador());
+
+	}
+	
+	@Test
+	void testSetTipoJugadorFaltaNombre() {
+		Jugador jugador = new Jugador();
+		
+		int edad = 34;
+		String idioma = "Español";
+		
+		jugador.setEdad(edad);
+		jugador.setIdioma(idioma);
+		
+		assertNotNull(edad, jugador.tipoJugador());
+		assertNull(null, jugador.tipoJugador());
+		assertNotNull(idioma, jugador.tipoJugador());
+	}
+	
+	@Test
+	void testSetTipoJugadorFaltaIdioma() {
+		Jugador jugador = new Jugador();
+		
+		int edad = 34;
+		String nombre = "Juan";
+		
+		jugador.setNombreJugador(nombre);
+		jugador.setEdad(edad);
+		
+		assertNotNull(edad, jugador.tipoJugador());
+		assertNotNull(nombre, jugador.tipoJugador());
+		assertNull(null, jugador.tipoJugador());
+	}
 }
