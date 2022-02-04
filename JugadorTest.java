@@ -32,9 +32,10 @@ class JugadorTest {
 	void testSetNombreJugadorCaracterMin() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe";
+		String nombreMayusculas = "PEPE";
 		
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador, jugador.getNombreJugador());
+		assertEquals(nombreMayusculas, jugador.getNombreJugador());
 	}
 	
 	/**
@@ -44,10 +45,13 @@ class JugadorTest {
 	void testSetNombreJugadorCaracterMax() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Maridelrosalcayetana";
+		String nombreMayusculas = "MARIADELROSACAYETANA";
+
 		
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador, jugador.getNombreJugador());
+		assertEquals(nombreMayusculas, jugador.getNombreJugador());
 	}
+	
 	
 	/**
 	 * Set nombre de jugador invalido con menos de 4 caracteres
