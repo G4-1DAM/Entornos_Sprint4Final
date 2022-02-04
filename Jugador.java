@@ -73,4 +73,20 @@ public class Jugador {
 	public int getEdad() {
 		return edad;
 	}
+	
+	//Stoty 5 Carlos Soler
+	public String tipoJugador(){
+		
+		String tipoJugador = "";
+		
+		if (edad>= 18 && edad<25) {
+			tipoJugador="Junior";
+		}else if (edad>= 25 && edad<35) {
+			tipoJugador="Senior";
+		}else if (edad>=35) {
+			tipoJugador="Master";
+		}
+			
+		return tipoJugador;
+	}
 }
