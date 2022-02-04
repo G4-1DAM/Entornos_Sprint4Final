@@ -208,7 +208,6 @@ class EquipoTest {
     	void categoriaEquipoCampoNombreVacio() {
         	Equipo equipo= new Equipo();
         	int ranking= 7;
-        	String categoria= "";
     		
         	equipo.setRanking(ranking);
     		 
@@ -220,7 +219,6 @@ class EquipoTest {
     	void categoriaEquipoCampoRankingVacio() {
         	Equipo equipo= new Equipo();
         	String nombreEquipo ="GDAM";
-        	String categoria= "";
         	
         	equipo.setNombreEquipo(nombreEquipo);
     		 
