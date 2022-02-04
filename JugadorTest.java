@@ -3,10 +3,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
- * 
- */
-
-/**
  * @author RobertoGarciaSanchez
  *
  */
@@ -19,7 +15,7 @@ class JugadorTest {
 	@Test
 	void testSetNombreJugadorVacio() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "  ";
+		String nombreJugador = "";
 		
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null, jugador.getNombreJugador());
@@ -46,12 +42,10 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Maridelrosalcayetana";
 		String nombreMayusculas = "MARIDELROSALCAYETANA";
-
 		
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreMayusculas, jugador.getNombreJugador());
 	}
-	
 	
 	/**
 	 * Set nombre de jugador invalido con menos de 4 caracteres
@@ -178,27 +172,7 @@ class JugadorTest {
 		assertEquals(null, jugador.getIdioma());
 	}
 	
-	//Story 5 CARLOS SOLER
-
-	//void testSetTipoJugador() {
-		//Jugador jugador = new Jugador();
-		
-		//int edad = 34;
-		//String nombre = "Juan";
-		//String idioma = "Español";
-		
-		//jugador.setNombreJugador(nombre);
-		//jugador.setEdad(edad);
-		//jugador.setIdioma(idioma);
-		
-		//assertEquals("Junior", jugador.tipoJugador());
-		//assertEquals("Senior", jugador.tipoJugador());
-		//assertEquals("Master", jugador.tipoJugador());
-		
-		//assertNotNull(edad, jugador.tipoJugador());
-		//assertNotNull(nombre, jugador.tipoJugador());
-		//assertNotNull(idioma, jugador.tipoJugador());
-	
+	// STORY 5 CARLOS SOLER
 	@Test
 	void testSetTipoJugador18() {
 		Jugador jugador = new Jugador();
@@ -358,4 +332,5 @@ class JugadorTest {
 		assertNotNull(nombre, jugador.tipoJugador());
 		assertNull(null, jugador.tipoJugador());
 	}
+
 }
