@@ -20,7 +20,7 @@ public class Jugador {
 		
 		}
 		if(nombre.length()>3 && nombre.length()<=20 && contador == 0) {
-		this.nombre = nombre;
+		this.nombre = nombre.toUppercase();
 		}else {
 			this.nombre = null;
 		}
