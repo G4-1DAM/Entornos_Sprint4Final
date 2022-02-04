@@ -1,5 +1,6 @@
 
 
+
 public class Jugador {
 	private String nombre;
 	private int edad;
@@ -76,17 +77,19 @@ public class Jugador {
 	
 	//Stoty 5 Carlos Soler
 	public String tipoJugador(){
-		
+
 		String tipoJugador = "";
-		
+
 		if (edad>= 18 && edad<25) {
-			tipoJugador="Junior";
+		tipoJugador="Junior";
 		}else if (edad>= 25 && edad<35) {
-			tipoJugador="Senior";
-		}else if (edad>=35) {
-			tipoJugador="Master";
+		tipoJugador="Senior";
+		}else if (edad>=35 && edad<99) {
+		tipoJugador="Master";
+		}else if (edad>=100) {
+		tipoJugador="Super Master";
 		}
-			
+
 		return tipoJugador;
-	}
+		}
 }
