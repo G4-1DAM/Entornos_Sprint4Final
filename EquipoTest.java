@@ -132,5 +132,98 @@ class EquipoTest {
 		equipo.setRanking(ranking);
 		assertEquals(ranking, equipo.getRanking());
 	}
-
+	 
+	/**
+         * @author RobertoGarciaSanchez
+         *
+         */
+        
+        //ranking igual a 7 devuelve categoria primera
+        @Test
+    	void categoriaEquipoPrimeraMin() {    
+            Equipo equipo= new Equipo();
+        	String nombreEquipo ="GDAM";
+        	int ranking = 7;
+        	
+    		equipo.setNombreEquipo(nombreEquipo);
+    		equipo.setRanking(ranking);
+    		
+    		assertEquals("Primera",equipo.categoriaEquipo());
+    	}
+        
+        //ranking igual a 10 devuelve categoria primera
+        @Test
+    	void categoriaEquipoPrimeraMax() {    
+            Equipo equipo= new Equipo();
+        	String nombreEquipo ="GDAM";
+        	int ranking = 10;
+        	
+    		equipo.setNombreEquipo(nombreEquipo);
+    		equipo.setRanking(ranking);
+    		
+    		assertEquals("Primera",equipo.categoriaEquipo());
+    	}
+        
+        //ranking igual a 3 devuelve categoria segunda
+        @Test
+    	void categoriaEquipoSegundaMin() {    
+            Equipo equipo= new Equipo();
+        	String nombreEquipo ="GDAM";
+        	int ranking = 3;
+        	
+    		equipo.setNombreEquipo(nombreEquipo);
+    		equipo.setRanking(ranking);
+    		
+    		assertEquals("Segunda",equipo.categoriaEquipo());
+    	}
+        
+        //ranking igual a 6 devuelve categoria segunda
+        @Test
+    	void categoriaEquipoSegundaMax() {    
+            Equipo equipo= new Equipo();
+        	String nombreEquipo ="GDAM";
+        	int ranking = 6;
+        	
+    		equipo.setNombreEquipo(nombreEquipo);
+    		equipo.setRanking(ranking);
+    		
+    		assertEquals("Segunda",equipo.categoriaEquipo());
+    	}
+        
+        //ranking menor de 3 devuelve categoria tercera
+        @Test
+    	void categoriaEquipoTercera() {    
+            Equipo equipo= new Equipo();
+        	String nombreEquipo ="GDAM";
+        	int ranking = 2;
+        	
+    		equipo.setNombreEquipo(nombreEquipo);
+    		equipo.setRanking(ranking);
+    		
+    		assertEquals("Tercera",equipo.categoriaEquipo());
+    	}
+        
+        //Campos nombre vacio. No devuelve categoria.
+        @Test
+    	void categoriaEquipoCampoNombreVacio() {
+        	Equipo equipo= new Equipo();
+        	int ranking= 7;
+        	String categoria= "";
+    		
+        	equipo.setRanking(ranking);
+    		 
+    		assertEquals("",equipo.categoriaEquipo());
+        }
+        
+      //Campos ranking vacio. No devuelve categoria.
+        @Test
+    	void categoriaEquipoCampoRankingVacio() {
+        	Equipo equipo= new Equipo();
+        	String nombreEquipo ="GDAM";
+        	String categoria= "";
+        	
+        	equipo.setNombreEquipo(nombreEquipo);
+    		 
+    		assertEquals("",equipo.categoriaEquipo());
+        }
 }
