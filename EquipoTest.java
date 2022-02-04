@@ -26,11 +26,12 @@ class EquipoTest {
 	@Test
 	void testSetNombreEquipoCaracterMin() {
 		Equipo equipo = new Equipo();
-		String nombreEquipo = "GDAM";
+		String nombreEquipo = "gdam";
+		String nombreMayusculas = "GDAM";
+
 
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo, equipo.getNombreEquipo());
-	}
+		assertEquals(nombreMayusculas, equipo.getNombreEquipo());	}
 
 	/**
 	 * Set nombre de equipo valido con caracteres maximos '20'
@@ -39,9 +40,10 @@ class EquipoTest {
 	void testSetNombreEquipoCaracterMax() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "DesarrolloAplicacion";
+		String nombreMayusculas = "DESARROLLOAPLICACION";
 
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo, equipo.getNombreEquipo());
+		assertEquals(nombreMayusculas, equipo.getNombreEquipo());	
 	}
 
 	/**
