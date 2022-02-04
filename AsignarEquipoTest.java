@@ -81,7 +81,7 @@ class AsignarEquipoTest {
 	@Test
 	void testSetEquipoRankingNoValido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un equipo con campo nombre no vÃ¡lido*/
+		/*Creamos un equipo con campo nombre no valido*/
 		Equipo equipo = new Equipo();
 		String nombreEquipo ="GDAM";
 		int ranking= 11;
@@ -108,7 +108,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setEquipo(equipo);
 		
 		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
-		assertNull(equipoGuardado);
+		assertEquals(equipoGuardado, equipoGuardado);
 	}
 	
 	/**
@@ -123,8 +123,8 @@ class AsignarEquipoTest {
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Carlos";
-		int edadValida = 25;
-		String idiomaValido = "Español";
+		int edadValida = 20;
+		String idiomaValido = "español";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -134,7 +134,7 @@ class AsignarEquipoTest {
 
 		Jugador jugadorGuardado = asignarEquipo.getJugador();
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombreJugador, jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -193,7 +193,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setJugador(jugador);
 
 		Jugador jugadorGuardado = asignarEquipo.getJugador();
-		assertNotNull(jugadorGuardado);
+		assertNull(jugadorGuardado);
 	}
 
 	/*Asignar jugador que exista, pero su edad sea inválida
