@@ -236,6 +236,24 @@ class JugadorTest {
 		assertNotNull(nombre, jugador.tipoJugador());
 		assertNotNull(idioma, jugador.tipoJugador());
 	}
+	@Test
+	void testSetTipoJugador100() {
+	Jugador jugador = new Jugador();
+
+	int edad = 100;
+	String nombre = "Juan";
+	String idioma = "EspaÃ±ol";
+
+	jugador.setNombreJugador(nombre);
+	jugador.setEdad(edad);
+	jugador.setIdioma(idioma);
+
+	assertEquals("Super Master", jugador.tipoJugador());
+
+	assertNotNull(edad, jugador.tipoJugador());
+	assertNotNull(nombre, jugador.tipoJugador());
+	assertNotNull(idioma, jugador.tipoJugador());
+	}
 	
 	@Test
 	void testSetTipoJugador25() {
