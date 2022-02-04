@@ -20,7 +20,7 @@ public class Equipo {
 		
 		}
 		if (nombreEquipo.length() > 3 && nombreEquipo.length() <= 20 && contador==0) {
-			this.nombreEquipo = nombreEquipo;
+			this.nombreEquipo = nombreEquipo.toUpperCase();
 		} else {
 			this.nombreEquipo = null;
 		}
