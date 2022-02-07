@@ -182,7 +182,6 @@ class AsignarEquipoTest {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
-		String nombreJugador = "Antonio";
 		int edadValida = 20;
 		String idiomaValido = "Español";
 
@@ -226,7 +225,6 @@ class AsignarEquipoTest {
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
-		Integer edadInvalida = null ;
 		String idiomaValido = "Español";
 		jugador.setNombreJugador(nombrevalido);
 
@@ -270,7 +268,6 @@ class AsignarEquipoTest {
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
 		int edadValida = 20;
-		String idiomaValido = "Español";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 
