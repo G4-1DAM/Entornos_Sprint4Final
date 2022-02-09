@@ -199,9 +199,9 @@ class JugadorTest {
 		
 		assertEquals("Junior", jugador.tipoJugador());
 		
-		assertNotNull(edad, jugador.tipoJugador());
-		assertNotNull(nombre, jugador.tipoJugador());
-		assertNotNull(idioma, jugador.tipoJugador());
+		assertEquals(edad, jugador.getEdad());
+		assertEquals(nombre.toUpperCase(), jugador.getNombreJugador());
+		assertEquals(idioma, jugador.getIdioma());
 	}
 	
 	@Test
@@ -218,9 +218,9 @@ class JugadorTest {
 		
 		assertEquals("Junior", jugador.tipoJugador());
 		
-		assertNotNull(edad, jugador.tipoJugador());
-		assertNotNull(nombre, jugador.tipoJugador());
-		assertNotNull(idioma, jugador.tipoJugador());
+		assertEquals(edad, jugador.getEdad());
+		assertEquals(nombre.toUpperCase(), jugador.getNombreJugador());
+		assertEquals(idioma, jugador.getIdioma());
 	}
 	@Test
 	void testSetTipoJugador100() {
@@ -252,9 +252,9 @@ class JugadorTest {
 		
 		assertEquals("Senior", jugador.tipoJugador());
 		
-		assertNotNull(edad, jugador.tipoJugador());
-		assertNotNull(nombre, jugador.tipoJugador());
-		assertNotNull(idioma, jugador.tipoJugador());
+		assertEquals(edad, jugador.getEdad());
+		assertEquals(nombre.toUpperCase(), jugador.getNombreJugador());
+		assertEquals(idioma, jugador.getIdioma());
 	}
 	
 	@Test
@@ -271,9 +271,9 @@ class JugadorTest {
 		
 		assertEquals("Senior", jugador.tipoJugador());
 		
-		assertNotNull(edad, jugador.tipoJugador());
-		assertNotNull(nombre, jugador.tipoJugador());
-		assertNotNull(idioma, jugador.tipoJugador());
+		assertEquals(edad, jugador.getEdad());
+		assertEquals(nombre.toUpperCase(), jugador.getNombreJugador());
+		assertEquals(idioma, jugador.getIdioma());
 	}
 	
 	@Test
@@ -290,9 +290,9 @@ class JugadorTest {
 		
 		assertEquals("Master", jugador.tipoJugador());
 		
-		assertNotNull(edad, jugador.tipoJugador());
-		assertNotNull(nombre, jugador.tipoJugador());
-		assertNotNull(idioma, jugador.tipoJugador());
+		assertEquals(edad, jugador.getEdad());
+		assertEquals(nombre.toUpperCase(), jugador.getNombreJugador());
+		assertEquals(idioma, jugador.getIdioma());
 	}
 	
 	
