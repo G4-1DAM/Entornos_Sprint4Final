@@ -22,6 +22,18 @@ class JugadorTest {
 	}
 	
 	/**
+	 * Set nombre de jugador "null"
+	 */
+	@Test
+	void testSetNombreJugadorNull() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = null;
+		
+		jugador.setNombreJugador(nombreJugador);
+		assertEquals(null, jugador.getNombreJugador());
+	}
+	
+	/**
 	 * Set nombre de jugador valido con caracteres minimos '4'.
 	 */
 	@Test
