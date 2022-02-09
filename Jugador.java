@@ -34,7 +34,7 @@ public class Jugador {
 		}
 	}
 	public void setIdioma(String idioma) {
-		if(idioma == "ingles" || idioma == "español"|| idioma == "frances"|| idioma == "aleman") {
+		if("ingles".equalsIgnoreCase(idioma) || "español".equalsIgnoreCase(idioma)|| "frances".equalsIgnoreCase(idioma)|| "aleman".equalsIgnoreCase(idioma)){
 			this.idioma = idioma;
 		}else {
 			this.idioma = null;
