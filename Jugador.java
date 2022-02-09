@@ -9,20 +9,22 @@ public class Jugador {
 	
 	public void setNombreJugador(String nombre) {
 		int contador = 0;
-		String nombreMayusculas = nombre.toUpperCase();
-		for (int i = 0; i < nombreMayusculas.length(); i++) {
-			char letra = nombreMayusculas.charAt(i);
-			if (letra >= 65 && letra <= 90) {
-				
-			}else {
-				contador ++;
+		if (nombre != null) {
+			String nombreMayusculas = nombre.toUpperCase();
+			for (int i = 0; i < nombreMayusculas.length(); i++) {
+				char letra = nombreMayusculas.charAt(i);
+				if (letra >= 65 && letra <= 90) {
+
+				}else {
+					contador ++;
+				}
+
 			}
-		
-		}
-		if(nombre.length()>3 && nombre.length()<=20 && contador == 0) {
-		this.nombre = nombre.toUpperCase();
-		}else {
-			this.nombre = null;
+			if(nombre.length()>3 && nombre.length()<=20 && contador == 0) {
+				this.nombre = nombre.toUpperCase();
+			}else {
+				this.nombre = null;
+			}
 		}
 	}
 	
