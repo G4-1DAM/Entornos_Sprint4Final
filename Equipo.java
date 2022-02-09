@@ -1,6 +1,6 @@
 public class Equipo {
 	private String nombreEquipo;
-	private int ranking=-1;
+	private int ranking;
 
 	public Equipo() {
 
@@ -8,20 +8,25 @@ public class Equipo {
 
 	public void setNombreEquipo(String nombreEquipo) {
 		int contador = 0;
-		String nombreEquipoMayusculas = nombreEquipo.toUpperCase();
-		for (int i = 0; i < nombreEquipoMayusculas.length(); i++) {
-			char letra = nombreEquipoMayusculas.charAt(i);
-			if (letra >= 65 && letra <= 90) {
+		if(nombreEquipo != null) {
+			String nombreEquipoMayusculas = nombreEquipo.toUpperCase();
+			for (int i = 0; i < nombreEquipoMayusculas.length(); i++) {
+				char letra = nombreEquipoMayusculas.charAt(i);
+				if (letra >= 65 && letra <= 90) {
 
-			} else {
-				contador++;
+				} else {
+					contador++;
+				}
+
 			}
-
 		}
-		if (nombreEquipo.length() > 3 && nombreEquipo.length() <= 20 && contador == 0) {
-			this.nombreEquipo = nombreEquipo.toUpperCase();
-		} else {
-			this.nombreEquipo = null;
+		if(nombreEquipo != null) {
+			if (nombreEquipo.length() > 3 && nombreEquipo.length() <= 20 && contador == 0) {
+
+				this.nombreEquipo = nombreEquipo.toUpperCase();
+			} else {
+				this.nombreEquipo = null;
+			}
 		}
 	}
 
