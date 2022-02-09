@@ -191,7 +191,7 @@ class JugadorTest {
 		
 		int edad = 18;
 		String nombre = "Juan";
-		String idioma = "Español";
+		String idioma = "ingles";
 		
 		jugador.setNombreJugador(nombre);
 		jugador.setEdad(edad);
@@ -210,7 +210,7 @@ class JugadorTest {
 		
 		int edad = 24;
 		String nombre = "Juan";
-		String idioma = "Español";
+		String idioma = "ingles";
 		
 		jugador.setNombreJugador(nombre);
 		jugador.setEdad(edad);
@@ -224,21 +224,18 @@ class JugadorTest {
 	}
 	@Test
 	void testSetTipoJugador100() {
-	Jugador jugador = new Jugador();
+		Jugador jugador = new Jugador();
 
-	int edad = 100;
-	String nombre = "Juan";
-	String idioma = "EspaÃ±ol";
+		int edad = 100;
+		String nombre = "Juan";
+		String idioma = "ingles";
 
-	jugador.setNombreJugador(nombre);
-	jugador.setEdad(edad);
-	jugador.setIdioma(idioma);
+		jugador.setNombreJugador(nombre);
+		jugador.setEdad(edad);
+		jugador.setIdioma(idioma);
 
-	assertEquals("Super Master", jugador.tipoJugador());
+		assertEquals("Super Master", jugador.tipoJugador());
 
-	assertNotNull(edad, jugador.tipoJugador());
-	assertNotNull(nombre, jugador.tipoJugador());
-	assertNotNull(idioma, jugador.tipoJugador());
 	}
 	
 	@Test
@@ -247,7 +244,7 @@ class JugadorTest {
 		
 		int edad = 25;
 		String nombre = "Juan";
-		String idioma = "Español";
+		String idioma = "ingles";
 		
 		jugador.setNombreJugador(nombre);
 		jugador.setEdad(edad);
@@ -266,7 +263,7 @@ class JugadorTest {
 		
 		int edad = 34;
 		String nombre = "Juan";
-		String idioma = "Español";
+		String idioma = "ingles";
 		
 		jugador.setNombreJugador(nombre);
 		jugador.setEdad(edad);
@@ -285,7 +282,7 @@ class JugadorTest {
 		
 		int edad = 35;
 		String nombre = "Juan";
-		String idioma = "Español";
+		String idioma = "ingles";
 		
 		jugador.setNombreJugador(nombre);
 		jugador.setEdad(edad);
@@ -304,14 +301,12 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		
 		String nombre = "Juan";
-		String idioma = "Español";
+		String idioma = "ingles";
 		
 		jugador.setNombreJugador(nombre);
 		jugador.setIdioma(idioma);
 		
-		assertNull(null, jugador.tipoJugador());
-		assertNotNull(nombre, jugador.tipoJugador());
-		assertNotNull(idioma, jugador.tipoJugador());
+		assertNull(jugador.tipoJugador());
 
 	}
 	
@@ -320,14 +315,13 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		
 		int edad = 34;
-		String idioma = "Español";
+		String idioma = "ingles";
 		
 		jugador.setEdad(edad);
 		jugador.setIdioma(idioma);
-		
-		assertNotNull(edad, jugador.tipoJugador());
-		assertNull(null, jugador.tipoJugador());
-		assertNotNull(idioma, jugador.tipoJugador());
+
+		assertNull(jugador.tipoJugador());
+
 	}
 	
 	@Test
@@ -340,9 +334,7 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		jugador.setEdad(edad);
 		
-		assertNotNull(edad, jugador.tipoJugador());
-		assertNotNull(nombre, jugador.tipoJugador());
-		assertNull(null, jugador.tipoJugador());
+		assertNull(jugador.tipoJugador());
 	}
 
 }
