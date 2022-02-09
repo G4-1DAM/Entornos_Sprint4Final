@@ -19,6 +19,17 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null, equipo.getNombreEquipo());
 	}
+	/**
+	 * Set nombre de equipo con nombreEquipo = null
+	 */
+	@Test
+	void testSetNombreEquipoNull() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo = null;
+
+		equipo.setNombreEquipo(nombreEquipo);
+		assertNull(equipo.getNombreEquipo());
+	}
 
 	/**
 	 * Set nombre de equipo valido con caracteres minimos '4'.
