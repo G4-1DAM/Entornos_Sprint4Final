@@ -1,12 +1,24 @@
+/**
+ * En esta clase se asignan los parametros que tendrá cada jugador
+ */
 public class Jugador {
 	private String nombre;
 	private int edad;
 	private String idioma;
-	
+
+	/**
+	 * Constructor vacío
+	 */
 	public Jugador () {
 			
-		}
-	
+	}
+
+	/**
+	 * Este metodo convierte a mayúsculas la cadena insertada por el usuario
+	 * Además hace sus comprobaciones correspondientes como por ejemplo medir
+	 * que la cadena tiene la longitud detallada en las especificaiones.
+	 * @param nombre
+	 */
 	public void setNombreJugador(String nombre) {
 		int contador = 0;
 		if (nombre != null) {
@@ -27,7 +39,11 @@ public class Jugador {
 			}
 		}
 	}
-	
+
+	/**
+	 * Comprueba que la edad esté en los margenes deseados y se la aplica.
+	 * @param edad
+	 */
 	public void setEdad(int edad) {
 		if(edad >=18 && edad <= 100) {
 			this.edad = edad;
@@ -35,6 +51,11 @@ public class Jugador {
 			this.edad = 0;
 		}
 	}
+
+	/**
+	 * Comprueba que el idioma sea uno de los cuatro disponibles
+	 * @param idioma
+	 */
 	public void setIdioma(String idioma) {
 		if("ingles".equalsIgnoreCase(idioma) || "español".equalsIgnoreCase(idioma)|| "frances".equalsIgnoreCase(idioma)|| "aleman".equalsIgnoreCase(idioma)){
 			this.idioma = idioma;
@@ -42,30 +63,34 @@ public class Jugador {
 			this.idioma = null;
 		}
 	}
+
+	/**
+	 * Le asigna un Tipo de Jugador según la edad introducida.
+	 * Los cuatro valores posibles son Junior, Senior, Master y Super Master.
+	 * @return Retorna el tipo de jugador.
+	 */
 	public String tipoJugador(){
 
 		String tipoJugador = null;
 		
         	if(idioma!=null && nombre!=null) {
-			if (edad>= 18 && edad<25) {
-				tipoJugador="Junior";
-			}else if (edad>= 25 && edad<35) {
-				tipoJugador="Senior";
-			}else if (edad>=35 && edad<99) {
-				tipoJugador="Master";
-			}else if (edad>=100) {
-				tipoJugador="Super Master";
-			}
+				if (edad>= 18 && edad<25) {
+					tipoJugador="Junior";
+				}else if (edad>= 25 && edad<35) {
+					tipoJugador="Senior";
+				}else if (edad>=35 && edad<99) {
+					tipoJugador="Master";
+				}else if (edad>=100) {
+					tipoJugador="Super Master";
+				}
         	}
 		return tipoJugador;
-		}
-	
-	
+	}
 
+	//Getters
 	public String getIdioma() {
 		return idioma;
 	}
-	
 	public String getNombreJugador() {
 		return nombre;
 	}
