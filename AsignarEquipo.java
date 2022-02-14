@@ -1,3 +1,4 @@
+package gestionEquipos;
 /**
  * Esta clase asigna a los equipos los objetos Equipo y Jugador
  * */
@@ -6,21 +7,19 @@ public class AsignarEquipo {
 	private Equipo equipo;
 	private Jugador jugador;
 
-	/**
-	 * Constructor vacio de AsignarEquipo
-	 */
 	public AsignarEquipo() {
-		
+
 	} 
 
 	/**
-	 * Este mÈtodo setea un Equipo pasandole como par·metros el Equipo equipo.
-	 * @param equipo El par·metro Equipo equipo define el nombre del equipo y su Raking 
+	 * Este m√©todo setea un Equipo pasandole como par√°metros el Equipo equipo.
+	 * @param equipo El par√°metro Equipo equipo define el nombre del equipo entre 4 y 20
+	 *  caracteres y un Raking entre 0 y 10.
 	 * */
 	public void setEquipo(Equipo equipo) {
 		int rankingMin = 0;
 		int rankingMax = 10;
-		
+
 		if (equipo != null 
 				&& equipo.getNombreEquipo() != null 
 				&& equipo.getRanking() >= rankingMin
@@ -29,9 +28,9 @@ public class AsignarEquipo {
 		}
 	}
 	/**
-	 * Este mÈtodo setea un Jugador pasandole como par·metros el Jugador jugador
-	 * @param jugador El par·metro Jugador jugador define el nombre de jugador,
-	 * su idioma y edad.
+	 * Este m√©todo setea un Jugador pasandole como par√°metros el Jugador jugador
+	 * @param jugador El par√°metro Jugador jugador define un nombre de jugador entre 
+	 * 4 y 20 caracteres,un idioma valido y una edad entre 18 y 100.
 	 * */
 	public void setJugador(Jugador jugador) {
 		int edadMin = 18;
@@ -48,13 +47,15 @@ public class AsignarEquipo {
 	}
 
 	/**
-	 * @return equipo
+	 * @return equipo Devuelve un objeto Equipo con un nombre entre 4 y 20 caracteres no numericos
+	 * y un ranking entre 0 y 10.
 	 */
 	public Equipo getEquipo() {
 		return equipo;
 	}
 	/**
-	 * @return jugador
+	 * @return jugador Devuelve un objeto Jugador con un nombre entre 4 y 20 caracteres no numericos,
+	 * un idioma valido y una edad entre 18 y 100.
 	 */
 	public Jugador getJugador() {
 		return jugador;
