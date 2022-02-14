@@ -1,8 +1,12 @@
 package gestionEquipos;
 
 /**
- * Esta clase asigna al equipo los objetos nombreEquipo, ranking y categoriaEquipo. 
- **/
+* Esta clase asigna al equipo los objetos nombreEquipo, ranking y categoriaEquipo. 
+* 
+* @author Antonio García Belver
+* @author Daniel del Toro Boigues
+* @author Roberto Garcia Sanchez* 
+**/
 
 public class Equipo {
 	private String nombreEquipo;
