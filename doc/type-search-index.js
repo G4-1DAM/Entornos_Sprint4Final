@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"gestionEquipos","l":"AsignarEquipo"},{"p":"gestionEquipos","l":"Equipo"},{"p":"gestionEquipos","l":"Jugador"}];updateSearchResults();
